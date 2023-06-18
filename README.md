@@ -56,6 +56,6 @@ This is an integer use to indent any other lines not mentioned by the previous v
 ## List of TODO improvements or features
 
 * Keep improving indentation, tags can be tricky to indent since its use can be in single line (as memory address identifier for a value) or multi-line (as a memory address where a set of instructions begin or like the single line use)
-* Add blinking and indentation to some nested directives like .macro. This idea is dropped since I noticed that I have to use either smie for this mode or make a custom function that evaluates all (or limited amount) the text before point after each keystroke searching for its respective close parenthesis (smie does this).
+* Add blinking and indentation to some nested directives like .macro. This idea is dropped since I noticed that I have to use either smie for this mode or make a custom function that evaluates all (or limited amount) the text before point after each keystroke searching for its respective close parenthesis (smie does this)
 * Add support for company
 * Add support for imenu
