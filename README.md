@@ -1,6 +1,8 @@
 # GNU Assembler Emacs mode
 
-Gas mode is a major mode for editing assembly code with AT&T syntax, usually code written to be executed by GAS (Gnu assembler).
+GAS mode is a major mode for editing assembly code with AT&T syntax, usually code written to be executed by GAS (*G*nu *AS*sembler).
+
+**Forked from: https://codeberg.org/Enocstocks/gas-mode.el**
 
 <br>
 
