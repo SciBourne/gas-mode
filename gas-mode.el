@@ -108,7 +108,7 @@ from these elements.")
     "stosw" "stosq" "cld" "cmpsb" "repe" "repne"
     "scasb" "scasw" "cpuid" "ldmxcsr" "stmxcsr"
     "movss" "movups" "addps" "movdqa" "paddd"
-    "pextrd")
+    "pextrd" "cmpb" "cmpw" "cmpl" "cmpq")
 
   "Instructions used in assembly programming")
 
@@ -149,7 +149,7 @@ from these elements.")
 (defconst gas-mode-font-lock
   `((,gas-tag-regex . font-lock-function-name-face)
     (,(regexp-opt gas-pseudo-ops) . font-lock-keyword-face)
-    ("%[a-zA-Z0-9]+" . font-lock-variable-name-face)
+    ("%[a-zA-Z0-9]+" . font-lock-builtin-face)
     ;; match the exact instruction:
     (,(concat "\\b" gas-instructions-regex "\\b") . font-lock-variable-name-face))
 
@@ -302,7 +302,7 @@ is calculated depending how many times `indent-for-tab-command' is executed in a
   (kill-all-local-variables)
 
   (setq-local major-mode 'gas-mode)
-  (setq-local mode-name "gas")
+  (setq-local mode-name "GNU Assembler")
   (setq-local electric-indent-inhibit t)
   (setq-local indent-line-function 'gas-indent-line)
 
@@ -311,7 +311,7 @@ is calculated depending how many times `indent-for-tab-command' is executed in a
   (setq-local comment-column 40)
   (setq-local comment-start "#")
   (setq-local comment-end "")
-  (setq-local comment-padding 1)
+  (setq-local comment-padding 2)
   (setq-local comment-multi-line t)
   (setq-local font-lock-defaults '(gas-mode-font-lock nil t nil nil)))
 
